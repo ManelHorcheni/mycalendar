@@ -1,0 +1,128 @@
+        <!-- narbar -->
+          <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" [routerLink]="['/calendar/view-all-event']"><B>MYCalendar</B></a>
+
+              <button type="button" class="btn btn-dark position-relative">
+                Notification
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  99+
+                  <span class="visually-hidden">unread messages</span>
+                </span>
+              </button>
+
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">MYCalendar</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                  </form>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" [routerLink]="['/calendar/view-all-event']">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" [routerLink]="['/calendar/add-event']">Ajouter événement</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Mes événements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Discussion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Friends</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Déconnexion</a>
+                    </li>
+                  </ul>
+                </div>
+                </div>
+              </div>
+          </nav>
+          <!-- /navbar -->
+
+          <!-- sidebar -->
+<div class="container">
+    <div class="main-body">   
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img src="/assets/avatar.jpg" alt="Admin" class="rounded-circle" width="150">
+                    <div class="mt-3">
+                      <h4>Nom Utilisateur</h4>
+                      
+                      <button class="btn btn-outline-primary">Ajout</button>
+                      <button class="btn btn-outline-primary">Message</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                  Modifier Profile
+                </a>
+                <a href="#" class="list-group-item list-group-item-action">Ajouter Evénement</a>
+                <a href="#" class="list-group-item list-group-item-action">Friends</a>
+                <a href="#" class="list-group-item list-group-item-action">Déconnexion</a>
+                
+              </div>
+            </div>
+            <!-- /sidebar -->
+
+            <!-- calendar -->
+
+          
+
+            <div class="col-md-8">
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <div class="row">
+                      <full-calendar [options]="calendarOptions"></full-calendar>
+                     
+                      
+                    </div>
+                   <!-- /calendar -->   
+                 <!-- mes événements -->
+                 <div class="text-center">
+                  <h1>Mes Événements</h1>
+                  <hr>
+                </div>
+                 <div class="card mb-3" style="max-width: 540px;">
+                  <div class="row g-0">
+                    <div class="col-md-8">
+                      <div class="card-body">
+                        <h5 class="card-title">Nom de l'événement</h5>
+                        <button class="btn btn-primary">Afficher</button>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <img src="/assets/event.jpg" class="img-fluid rounded-end" alt="...">
+                    </div>
+                  </div>
+                </div>
+                
+                 <!-- /mes événements --> 
+            
+ 
+          </div>
+        </div>
+      </div>
+          </div>
+
+        </div>
+      </div>

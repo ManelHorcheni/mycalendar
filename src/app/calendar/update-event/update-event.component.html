@@ -1,0 +1,103 @@
+<!-- Navbar-->
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['/calendar/view-all-event']"><B>MYCalendar</B></a>
+
+    <button type="button" class="btn btn-dark position-relative">
+      Notification
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        99+
+        <span class="visually-hidden">unread messages</span>
+      </span>
+    </button>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">MYCalendar</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['/calendar/view-all-event']">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Profile</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/calendar/add-event']">Ajouter événement</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Mes événements</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Discussion</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Friends</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Déconnexion</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row align-items-center justify-content-center my-5">
+      <div class="col-md-6">
+        <h1 class="text-center">Modifier un événement</h1>
+        <form>
+          <div class="mb-3">
+            <label for="event-name" class="form-label">Nom de l'événement :</label>
+            <input type="text" class="form-control" id="event-name" placeholder="Entrez le nom de l'événement">
+          </div>
+          <div class="mb-3">
+            <label for="event-date" class="form-label">Date de l'événement :</label>
+            <input type="date" class="form-control" id="event-date">
+          </div>
+          <div class="mb-3">
+            <label for="event-time" class="form-label">Heure de l'événement :</label>
+            <input type="time" class="form-control" id="event-time">
+          </div>
+          <div class="mb-3">
+            <label for="event-location" class="form-label">Lieu de l'événement :</label>
+            <input type="text" class="form-control" id="event-location" placeholder="Entrez le lieu de l'événement">
+          </div>
+          <div class="mb-3">
+            <label for="friends" class="form-label">Ajouter des amis :</label>
+            <input type="text" class="form-control" id="friends" placeholder="Entrez le nom de vos amis séparés par des virgules">
+            <small class="form-text text-muted">Exemple: John Doe, Jane Smith, Bob Johnson</small>
+          </div>
+          <div class="form-group">
+            <label for="event-color">Couleur de l'événement :</label>
+            <div class="color-picker">
+              <input type="color" id="event-color" name="event-color">
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="image" class="form-label">Image :</label>
+            <input class="form-control" type="file" id="image" accept="image/*">
+          </div>
+          <div class="mb-3">
+            <label for="event-description" class="form-label">Description de l'événement :</label>
+            <textarea class="form-control" id="event-description" rows="3" placeholder="Entrez une description de l'événement"></textarea>
+          </div>
+          <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary">Modifier</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

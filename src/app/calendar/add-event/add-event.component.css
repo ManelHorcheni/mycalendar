@@ -1,0 +1,15 @@
+h1 {
+    color: blue;
+    text-align: center;
+  }
+  .form-label {
+    font-size: 1.2em;
+    color: #444;
+    margin-bottom: 0.5em;
+  }
+  .container {
+    position: relative;
+    top: 50px;
+  }
+  
+  

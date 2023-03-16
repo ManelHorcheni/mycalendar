@@ -1,0 +1,76 @@
+<!-- Navbar-->
+<nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['/calendar/view-all-event']"><B>MYCalendar</B></a>
+
+    <button type="button" class="btn btn-dark position-relative">
+      Notification
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        99+
+        <span class="visually-hidden">unread messages</span>
+      </span>
+    </button>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">MYCalendar</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" [routerLink]="['/calendar/view-all-event']">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Profile</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" [routerLink]="['/calendar/add-event']">Ajouter événement</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Mes événements</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Discussion</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Friends</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">Déconnexion</a>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </div>
+</nav>
+
+
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="deleteModalLabel">Supprimer l'événement ?</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Êtes-vous sûr de vouloir supprimer cet événement ?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+          <button type="button" class="btn btn-danger">Supprimer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

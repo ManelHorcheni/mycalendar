@@ -1,0 +1,14 @@
+h1 {
+    color: blue;
+    text-align: center;
+  }
+
+.container{
+    margin-top: 100px;
+}
+
+.form-label {
+  font-size: 1.2em;
+  color: #444;
+  margin-bottom: 0.5em;
+}
